@@ -94,7 +94,7 @@ func toAlphabet(num int, alphabet string) string {
 	// execute at least once, even if num is 0, since we should return the '0':
 	for {
 		digits = append(digits, num%base) // TODO handle negatives properly?
-		num = int(math.Floor(float64(num) / float64(base)))
+		num /= base
 		if num <= 0 {
 			break
 		}
